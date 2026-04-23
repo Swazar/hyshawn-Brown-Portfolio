@@ -257,8 +257,8 @@ section {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 280px 1.2fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
     align-items: start;
 }
 
@@ -299,6 +299,36 @@ section {
     z-index: 0;
     filter: blur(16px);
     opacity: 0.6;
+}
+
+/* HERO PHOTO */
+.hero-photo-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 32px;
+}
+
+.hero-profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.hero-photo-glow {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.5), rgba(6, 182, 212, 0.3));
+    z-index: 0;
+    filter: blur(20px);
+    opacity: 0.7;
 }
 
 .about-text p {
@@ -505,15 +535,6 @@ footer p {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
-    }
-
-    .about-photo-col {
-        justify-content: flex-start;
-    }
-
-    .photo-wrapper {
-        width: 180px;
-        height: 210px;
     }
 }
 
